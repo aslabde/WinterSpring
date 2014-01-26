@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+ 
+ 	<!-- Here is where DI is defined. Each class receives an instance from
+ 	 the class that lies beneath it. (Action<-Bo< DAO)  -->
+ 	
+ 	<bean id="bookAction" class="tk.ebalsa.action.BookAction">
+		<property name="bookBo" ref="bookBo" />	
+	</bean>
+ 
+	<bean id="bookBo" class="tk.ebalsa.Bo.BookBoImpl" >
+		<property name="bookDAO" ref="bookDAO" />
+	</bean>
+ 
+   	<bean id="bookDAO" class="com.mkyong.customer.dao.impl.CustomerDAOImpl" >
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+ 
+</beans>
