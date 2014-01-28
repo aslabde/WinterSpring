@@ -21,7 +21,7 @@ public class BookAction implements ModelDriven {
 		this.bookBo=bookBo;
 	}
 	
-	@Override
+
 	public Object getModel() {
 		return book;
 	}

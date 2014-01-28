@@ -15,7 +15,7 @@
 		<property name="bookDAO" ref="bookDAO" />
 	</bean>
  
-   	<bean id="bookDAO" class="com.mkyong.customer.dao.impl.CustomerDAOImpl" >
+   	<bean id="bookDAO" class="tk.ebalsa.dao.BookDAOImpl" >
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
  

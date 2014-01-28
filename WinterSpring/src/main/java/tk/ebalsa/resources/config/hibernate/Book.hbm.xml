@@ -5,12 +5,11 @@
 
 <hibernate-mapping>
     <class name="tk.ebalsa.model.Book" table="BOOKS" >
-        <id name="bookId" column="BOOK_ID">
+        <id name="bookId" type="java.lang.Long" column="BOOK_ID">
             <generator class="identity" />
         </id>
-      	  <property name="author" />
-          <property name="editor" />
-          <property name="prize"  />
+      	  <property name="author" type="string"/>
+          <property name="editor" type="string"/>
     
     </class>
 </hibernate-mapping>
